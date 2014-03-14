@@ -84,14 +84,6 @@
   -moz-animation-timing-function: steps(8, start);
   animation-timing-function: steps(8, start); }
 
-
-
-
-
-
-
-
-
 .ion-alert:before {
   content: "\f101"; }
 
@@ -1980,7 +1972,7 @@ body, .ionic-body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  color: #000;
+  color: #004771;
   word-wrap: break-word;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
@@ -2232,7 +2224,7 @@ cite {
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #000;
+  color: #004771;
   font-weight: 500;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   line-height: 1.2; }
@@ -2559,12 +2551,14 @@ a.subdued {
     .bar.bar-stable .title {
       color: #444; }
   .bar.bar-positive {
-    background-color: #4a87ee;
+    background-color: #004771;
     border-color: #145fd7;
     background-image: linear-gradient(0deg, #145fd7, #145fd7 50%, transparent 50%);
     color: #fff; }
     .bar.bar-positive .title {
-      color: #fff; }
+      color: #fff; 
+      font-weight: bold;
+    }
   .bar.bar-calm {
     background-color: #43cee6;
     border-color: #1aacc3;
@@ -2587,12 +2581,14 @@ a.subdued {
     .bar.bar-balanced .title {
       color: #fff; }
   .bar.bar-energized {
-    background-color: #f0b840;
+    background-color: #FFCC16;
     border-color: #d39211;
     background-image: linear-gradient(0deg, #d39211, #d39211 50%, transparent 50%);
     color: #fff; }
     .bar.bar-energized .title {
-      color: #fff; }
+      color: #000;
+      font-weight: bold;
+    }
   .bar.bar-royal {
     background-color: #8a6de9;
     border-color: #552bdf;
@@ -2935,7 +2931,7 @@ a.subdued {
       background-color: #444;
       color: #f8f8f8; }
   .tabs.tabs-positive {
-    background-color: #4a87ee;
+    background-color: #004771;
     background-image: linear-gradient(0deg, #145fd7, #145fd7 50%, transparent 50%);
     border-color: #145fd7;
     color: #fff; }
