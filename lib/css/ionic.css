@@ -1678,7 +1678,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   vertical-align: baseline;
   font: inherit;
-  font-size: 100%; }
+  font-size: 100%;
+  font-family: 'open_sanslight'; }
 
 ol, ul {
   list-style: none; }
@@ -2225,8 +2226,7 @@ cite {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #004771;
-  font-weight: 500;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: 'open_sanslight';
   line-height: 1.2; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small, .h3 small, .h4 small, .h5 small, .h6 small {
     font-weight: normal;
@@ -3611,7 +3611,7 @@ a.item-icon-right:after, button.item-icon-right:after, a.item-button-right:after
 .item-note {
   float: right;
   color: #aaa;
-  font-size: 14px; }
+  font-size: 12px; }
 
 .item-reordering {
   position: absolute;
