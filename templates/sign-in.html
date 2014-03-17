@@ -11,14 +11,15 @@
     <div class="list list-inset">
       <label class="item item-input">
         <span class="input-label">Usuario</span>
-        <input type="text" placeHolder="Ingrese su Usuario" required>
+         <input type="text" ng-model="user.username" placeHolder="Ingrese su Usuario" required>
       </label>
       <label class="item item-input">
         <span class="input-label">Clave</span>
-        <input type="password" placeHolder="Ingrese su Clave" required>
+        <input type="password" ng-model="user.password" placeHolder="Ingrese su Clave" required>
       </label>
-      <ion-toggle>Recordar Usuario</ion-toggle>
-      <a href="#/tab/transactions" class="button button-positive button-block">Ingresar</a>
+      <button class="button button-block button-positive" ng-click="signIn(user)">
+      Ingresar
+      </button>
     </div>
    </ion-content>
 </ion-view>

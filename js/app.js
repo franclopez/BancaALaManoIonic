@@ -14,20 +14,16 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
   // Each state's controller can be found in controllers.js
    $stateProvider
 
+    .state('signin', {
+      url: "/sign-in",
+      templateUrl: "templates/sign-in.html",
+      controller: 'SignInCtrl'
+    })
     // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
       abstract: true,
       templateUrl: "templates/tabs.html"
-    })
-
-    .state('tab.bancaalamano-index', {
-      url: '/bancaalamano',
-      views: {
-        'bancaalamano-tab': {
-          templateUrl: 'templates/bancaalamano-index.html',
-        }
-      }
     })
 
     .state('tab.transactions', {
@@ -48,6 +44,15 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       }
     })
 
+    .state('tab.notifications', {
+      url: '/notifications',
+      views: {
+        'transactions-tab': {
+          templateUrl: 'templates/notifications.html'
+        }
+      }
+    })
+
     .state('tab.about', {
       url: '/about',
       views: {
@@ -58,6 +63,7 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
     });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/bancaalamano');
+ // $urlRouterProvider.otherwise('/tab/bancaalamano');
+  $urlRouterProvider.otherwise("/sign-in");
 
 });
