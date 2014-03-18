@@ -1,5 +1,5 @@
 angular.module('bancaalamano.controllers', ['ionic'])
-	
+	//Controlador encargado de el Logon de usuario
 	.controller('SignInCtrl', function($scope, $state) {
 		  $scope.signIn = function(user) {
 		    console.log('Sign-In', user);
@@ -8,6 +8,7 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		    }
 		    else {
 		    	alert('Por Favor Ingrese su Usuario y Contraseña');
+		    	//TODO Investigar porque no funciona el ionicPopup
 		    	/*
 		    	$ionicPopup.alert({
 	              title: 'Datos Incompletos',
@@ -15,9 +16,29 @@ angular.module('bancaalamano.controllers', ['ionic'])
 	            }).then(function(res) {
 	              console.log('No ingresó datos de login');
 	            });
-*/
+				*/
 		    }
-		    
 		  };
 	})
+	// Controlador que obtiene los datos de saldo de un cliente
+	.controller('BalanceCtrl', function($scope, ConsultaSaldoService) {
+	  // ConsultaSaldoService servicio que invoca REST de consulta de Saldo (services.js)
+	  	console.log("invocando servicio..");
+		$scope.consultaSaldo = ConsultaSaldoService.query();
+		$scope.consultaSaldo.$promise.then(
+			function (result) {
+				console.log(JSON.stringify(result));
+			    console.log(result.balInqRs[0].amt);
+			    $scope.saldo = result.balInqRs[0].amt;
+			},
+			function( error ){
+				console.log(JSON.stringify(error));
+				$scope.saldo = 0.00;//2006330.50;
+			}
+		);
+	})
 ;
+
+function jsonp_callback(data) {
+     console.log( JSON.stringify(data));
+};

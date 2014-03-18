@@ -5,6 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'bancaalamano.services' is found in services.js
 // 'bancaalamano.controllers' is found in controllers.js
+
 angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.controllers'])
   .config(function($stateProvider, $urlRouterProvider) {
 
@@ -39,7 +40,8 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       url: '/balance',
       views: {
         'transactions-tab': {
-          templateUrl: 'templates/balance-inquiry.html'
+          templateUrl: 'templates/balance-inquiry.html',
+           controller: 'BalanceCtrl'
         }
       }
     })
