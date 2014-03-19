@@ -46,6 +46,24 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       }
     })
 
+    .state('tab.send', {
+      url: '/send',
+      views: {
+        'transactions-tab': {
+          templateUrl: 'templates/send.html',
+        }
+      }
+    })
+
+    .state('tab.receive', {
+      url: '/receive',
+      views: {
+        'transactions-tab': {
+          templateUrl: 'templates/receive.html',
+        }
+      }
+    })
+
     .state('tab.notifications', {
       url: '/notifications',
       views: {
