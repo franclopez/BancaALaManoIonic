@@ -30,10 +30,14 @@ angular.module('bancaalamano.controllers', ['ionic'])
 				console.log(JSON.stringify(result));
 				var resultado = result.BalInqRs;
 			    $scope.saldo = resultado[0].Amt;
+			    var el = document.getElementById("saldoLoader");
+				el.style.display = (el.style.display == 'none') ? 'block' : 'none';
 			},
 			function( error ){
 				console.log(JSON.stringify(error));
-				$scope.saldo = 0.00;//2006330.50;
+				$scope.saldo = 0.00;
+				var el = document.getElementById("saldoLoader");
+				el.style.display = (el.style.display == 'none') ? 'block' : 'none';
 			}
 		);
 	})
