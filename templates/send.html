@@ -12,6 +12,9 @@
         <div class="item item-divider">
            <h2>Enviando Dinero</h2>
         </div>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label item-text-wrap">Tipo de Cuenta:</span>
+        </label>
          <label class="item item-radio">
           <input type="radio" name="group">
           <div class="item-content">
@@ -31,10 +34,10 @@
           <input type="number" placeholder="Monto">
         </label>
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Número de Cuenta que recibe el Dinero</span>
+          <span class="input-label item-text-wrap">Número de Cuenta que recibe el Dinero</span>
           <input type="number" placeholder="Num Cuenta">
         </label>
-         <button class="button button-block button-positive" ng-click="enviarDinero()">
+         <button class="button button-block button-positive" ng-click="show()">
                Enviar Dinero
           </button>
         <div>

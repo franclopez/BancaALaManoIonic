@@ -51,6 +51,7 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       views: {
         'transactions-tab': {
           templateUrl: 'templates/send.html',
+          controller: 'LoadingCtrl'
         }
       }
     })
@@ -59,7 +60,7 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       url: '/receive',
       views: {
         'transactions-tab': {
-          templateUrl: 'templates/receive.html',
+          templateUrl: 'templates/receive.html'
         }
       }
     })
