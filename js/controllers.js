@@ -28,8 +28,8 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		$scope.consultaSaldo.$promise.then(
 			function (result) {
 				console.log(JSON.stringify(result));
-			    console.log(result.balInqRs[0].amt);
-			    $scope.saldo = result.balInqRs[0].amt;
+				var resultado = result.BalInqRs;
+			    $scope.saldo = resultado[0].Amt;
 			},
 			function( error ){
 				console.log(JSON.stringify(error));
@@ -38,7 +38,3 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		);
 	})
 ;
-
-function jsonp_callback(data) {
-     console.log( JSON.stringify(data));
-};
