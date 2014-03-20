@@ -31,7 +31,8 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       url: '/transactions',
       views: {
         'transactions-tab': {
-          templateUrl: 'templates/transactions.html'
+          templateUrl: 'templates/transactions.html',
+           controller: 'GenericCtrl'
         }
       }
     })
@@ -60,7 +61,8 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       url: '/receive',
       views: {
         'transactions-tab': {
-          templateUrl: 'templates/receive.html'
+          templateUrl: 'templates/receive.html',
+           controller: 'GenericCtrl'
         }
       }
     })
@@ -69,7 +71,8 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       url: '/notifications',
       views: {
         'transactions-tab': {
-          templateUrl: 'templates/notifications.html'
+          templateUrl: 'templates/notifications.html',
+           controller: 'GenericCtrl'
         }
       }
     })
@@ -78,7 +81,8 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       url: '/about',
       views: {
         'about-tab': {
-          templateUrl: 'templates/about.html'
+          templateUrl: 'templates/about.html',
+           controller: 'GenericCtrl'
         }
       }
     });

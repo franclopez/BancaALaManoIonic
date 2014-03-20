@@ -3214,7 +3214,7 @@ a.subdued {
  * --------------------------------------------------
  */
 .item {
-  color: #444;
+  color: #004771;
   background-color: #fff;
   border-color: #ddd;
   -webkit-transition: margin-left 0.2s ease-in-out, margin-right 0.2s ease-in-out, left 0.2s ease-in-out;
@@ -4090,7 +4090,7 @@ input, button, select, textarea {
   flex: 1 0 100px;
   padding: 7px 10px 7px 3px;
   max-width: 200px;
-  color: #444;
+  color: #004771;
   font-weight: bold; }
 
 .placeholder-icon {
