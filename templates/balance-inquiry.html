@@ -5,7 +5,7 @@
    <div class="bar bar-subheader bar-energized">
       <button class="button icon ion-social-bitcoin"></button>
       <h1 class="title">Consulta de Saldo</h1>
-      <a href="#" class="button icon ion-android-share"></a>
+      <button class="button icon ion-android-share"></button>
    </div>   
   <ion-content has-header="true" has-subheader="true" has-tabs="true" padding="true">
      <div class="list card">
@@ -14,7 +14,8 @@
         </div>
         <div class="item">
            <spam>A la fecha su saldo es de $ </spam>
-           {{saldo}}  <spam id="saldoLoader" class="icon-left ion-loading-a"></spam>  
+           {{saldo}}   <spam id="saldoLoader" class="icon-left ion-loading-a"></spam>  
+           <div class="item-text-wrap mensajeError">{{mensaje}}</div>
         </div>
         <div>
             <p>Cualquier inquietud por favor comuníquese con nuestras lineas de atención.</p>

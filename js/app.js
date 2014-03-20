@@ -51,7 +51,7 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       views: {
         'transactions-tab': {
           templateUrl: 'templates/send.html',
-          controller: 'LoadingCtrl'
+          controller: 'SendMoneyCtrl'
         }
       }
     })
