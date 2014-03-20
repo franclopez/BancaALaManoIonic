@@ -20,6 +20,7 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       templateUrl: "templates/sign-in.html",
       controller: 'SignInCtrl'
     })
+    
     // setup an abstract state for the tabs directive
     .state('tab', {
       url: "/tab",
@@ -52,7 +53,7 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       views: {
         'transactions-tab': {
           templateUrl: 'templates/send.html',
-          controller: 'SendMoneyCtrl'
+          controller: 'GenericCtrl'
         }
       }
     })
@@ -62,6 +63,16 @@ angular.module('bancaalamano', ['ionic', 'bancaalamano.services', 'bancaalamano.
       views: {
         'transactions-tab': {
           templateUrl: 'templates/receive.html',
+           controller: 'GenericCtrl'
+        }
+      }
+    })
+
+    .state('tab.messages', {
+      url: '/messages',
+      views: {
+        'transactions-tab': {
+          templateUrl: 'templates/messages.html',
            controller: 'GenericCtrl'
         }
       }

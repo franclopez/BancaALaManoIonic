@@ -71,11 +71,12 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		});
 	}])
 
-	.controller('SendMoneyCtrl', function($scope, $state, $ionicModal) {
-	   
-		  $scope.enviarDinero = function() {
+	.controller('GenericCtrl', function($scope, $ionicModal, $state) {
+	   	  
+	   	  $scope.enviarDinero = function() {
 		  	console.log("invocando servicio de envio de dinero..");
-		  	$state.go('tab.transactions');	
+		  	alert("La transacción fue realizada con éxito.");
+		  	$state.go('tab.transactions');
 		  };
 
 		  $ionicModal.fromTemplateUrl('share.html', function(modal) {
@@ -93,27 +94,6 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		  $scope.$on('$destroy', function() {
 		    $scope.modal.remove();
 		  });
-
-	 })
-
-	.controller('GenericCtrl', function($scope, $ionicModal) {
-	   
-		  $ionicModal.fromTemplateUrl('share.html', function(modal) {
-		    $scope.modal = modal;
-		  }, {
-		    scope: $scope,
-		    animation: 'slide-in-up'
-		  });
-		  $scope.openModal = function() {
-		    $scope.modal.show();
-		  };
-		  $scope.closeModal = function() {
-		    $scope.modal.hide();
-		  };
-		  $scope.$on('$destroy', function() {
-		    $scope.modal.remove();
-		  });
-
 	 })
 ;
 
