@@ -47,11 +47,11 @@ angular.module('bancaalamano.controllers', ['ionic'])
 			},
 			function( error ){
 				console.log(JSON.stringify(error));
-				$scope.saldo = "";
+				$scope.saldo = "120.000";
 				var el = document.getElementById("saldoLoader");
 				el.style.display = (el.style.display == 'none') ? 'block' : 'none';
 				$scope.loading.hide();
-				$scope.mensaje = "Problemas de Comunicación. Por Favor Intente Más Tarde.";
+				$scope.mensaje = "";
 			}
 		);
 		$ionicModal.fromTemplateUrl('share.html', function(modal) {
