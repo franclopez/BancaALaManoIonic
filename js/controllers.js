@@ -34,26 +34,31 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		      // The delay in showing the indicator
 		      showDelay: 500
 		});
-		$scope.consultaSaldo = ConsultaSaldoService.query();
-		$scope.consultaSaldo.$promise.then(
-			function (result) {
-				console.log(JSON.stringify(result));
-				var resultado = result.BalInqRs;
-			    $scope.saldo = resultado[0].Amt;
-			    var el = document.getElementById("saldoLoader");
-				el.style.display = (el.style.display == 'none') ? 'block' : 'none';
-				$scope.loading.hide();
-				$scope.mensaje = "";
-			},
-			function( error ){
-				console.log(JSON.stringify(error));
-				$scope.saldo = "120.000";
-				var el = document.getElementById("saldoLoader");
-				el.style.display = (el.style.display == 'none') ? 'block' : 'none';
-				$scope.loading.hide();
-				$scope.mensaje = "";
-			}
-		);
+		$scope.saldo = "120.000";
+		var el = document.getElementById("saldoLoader");
+		el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+		$scope.loading.hide();
+		$scope.mensaje = "";
+		// $scope.consultaSaldo = ConsultaSaldoService.query();
+		// $scope.consultaSaldo.$promise.then(
+		// 	function (result) {
+		// 		console.log(JSON.stringify(result));
+		// 		var resultado = result.BalInqRs;
+		// 	    $scope.saldo = resultado[0].Amt;
+		// 	    var el = document.getElementById("saldoLoader");
+		// 		el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+		// 		$scope.loading.hide();
+		// 		$scope.mensaje = "";
+		// 	},
+		// 	function( error ){
+		// 		console.log(JSON.stringify(error));
+		// 		$scope.saldo = "120.000";
+		// 		var el = document.getElementById("saldoLoader");
+		// 		el.style.display = (el.style.display == 'none') ? 'block' : 'none';
+		// 		$scope.loading.hide();
+		// 		$scope.mensaje = "";
+		// 	}
+		// );
 		$ionicModal.fromTemplateUrl('share.html', function(modal) {
 		    $scope.modal = modal;
 		}, {
