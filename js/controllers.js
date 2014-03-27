@@ -58,7 +58,7 @@ angular.module('bancaalamano.controllers', ['ionic'])
 		// 		$scope.loading.hide();
 		// 		$scope.mensaje = "";
 		// 	}
-		// );
+		//);
 		$ionicModal.fromTemplateUrl('share.html', function(modal) {
 		    $scope.modal = modal;
 		}, {
